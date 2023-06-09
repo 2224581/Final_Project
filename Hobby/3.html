@@ -19,6 +19,16 @@
 
   <script type="text/javascript" src="https://static.crunchyroll.com/vilos-v2/web/vilos/js/bundle.js"
     charset="utf-8"></script>
+  <script>
+    // Turn on Anime4K Canvas
+    toggleCanvas();
+    // Load video
+    window.addEventListener('load', function () {
+      onSelectFile('../video/3.mp4');
+      var event = new KeyboardEvent('keydown', { 'keyCode': 32 });
+      document.dispatchEvent(event);
+    });
+  </script>
 </body>
 
 </html>
