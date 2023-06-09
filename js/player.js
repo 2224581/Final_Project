@@ -6,7 +6,7 @@ function toggleCanvas() {
     button.textContent = canvas.style.display === 'none' ? 'Enable Anime4K' : 'Disable Anime4K';
 }
 
-// Function to select video
+// Function to select video from html
 function onSelectFile(filePath) {
     fetch(filePath)
         .then(response => response.blob())
