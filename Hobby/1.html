@@ -10,7 +10,6 @@
 <body onload="onLoad();">
 
   <div id=input>
-    <input type="file" onchange="onSelectFile(this);"><br>
     <button onclick="toggleCanvas()">Disable Anime4K</button>
   </div>
 
@@ -25,6 +24,30 @@
       canvas.style.display = canvas.style.display === 'none' ? '' : 'none';
       const button = document.querySelector('button');
       button.textContent = canvas.style.display === 'none' ? 'Enable Anime4K' : 'Disable Anime4K';
+    }
+    window.onload = function () {
+      onLoad("../video/1.mp4");
+    };
+
+    function onLoad(videoPath) {
+      fetch(videoPath)
+        .then(response => response.blob())
+        .then(blob => {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            let src = e.target.result;
+            changeVideo(src);
+          };
+          reader.readAsDataURL(blob);
+        })
+        .catch(error => {
+          console.error("Error loading video:", error);
+        });
+    }
+
+    function changeVideo(src) {
+      const player0 = document.getElementById('player0');
+      player0.src = src;
     }
   </script>
 
