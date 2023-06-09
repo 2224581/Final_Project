@@ -11,7 +11,6 @@
 <body onload="onLoad();">
 
   <div id=input>
-    <button onclick="onSelectFile('../video/1.mp4')">Select File</button>
     <button onclick="toggleCanvas()">Disable Anime4K</button>
   </div>
 
@@ -20,12 +19,14 @@
   <script type="text/javascript" src="https://static.crunchyroll.com/vilos-v2/web/vilos/js/bundle.js"
     charset="utf-8"></script>
   <script>
+    // Turn on Anime4K (upscaling anime)
     toggleCanvas();
+    // Load video
     window.addEventListener('load', function () {
-      const button = document.querySelector('button');
-      button.style.display = 'none';
       onSelectFile('../video/1.mp4');
     });
+    const video = document.getElementsByTagName('video')[0];
+    video.autoplay = true;
   </script>
 </body>
 
