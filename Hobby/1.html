@@ -5,12 +5,12 @@
   <title>KONOSUBA -An Explosion on This Wonderful World!</title>
   <link rel="stylesheet" href="../css/player.css">
   <script src='../lib/Anime4K.js'></script>
+  <script src='../js/player.js'></script>
 </head>
 
 <body onload="onLoad();">
 
-  <div id=input>
-    <button onclick="toggleCanvas()">Disable Anime4K</button>
+  <button onclick="toggleCanvas()">Disable Anime4K</button>
   </div>
 
   <div id="vilos"></div>
@@ -19,21 +19,17 @@
     charset="utf-8"></script>
   <script>
     toggleCanvas();
-    function toggleCanvas() {
-      const canvas = document.querySelector('canvas');
-      canvas.style.display = canvas.style.display === 'none' ? '' : 'none';
-      const button = document.querySelector('button');
-      button.textContent = canvas.style.display === 'none' ? 'Enable Anime4K' : 'Disable Anime4K';
-    }
-
-    function onLoad() {
-      const videoSource = "../video/1.mp4";
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const src = e.target.result;
-        changeVideo(src);
-      };
-      reader.readAsDataURL(videoSource);
+    function onSelectFile(filePath) {
+      fetch(filePath)
+        .then(response => response.blob())
+        .then(blob => {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            let src = e.target.result;
+            changeVideo(src);
+          };
+          reader.readAsDataURL(blob);
+        });
     }
 
     function changeVideo(src) {
@@ -43,10 +39,9 @@
     }
 
     window.onload = function () {
-      onLoad();
+      onSelectFile('../video/1.mp4');
     };
   </script>
-
 </body>
 
 </html>

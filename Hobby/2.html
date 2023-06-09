@@ -5,6 +5,7 @@
   <title>KamiKatsu: Working for God in a Godless World</title>
   <link rel="stylesheet" href="../css/player.css">
   <script src='../lib/Anime4K.js'></script>
+  <script src='../js/player.js'></script>
 </head>
 
 <body onload="onLoad();">
@@ -18,16 +19,6 @@
 
   <script type="text/javascript" src="https://static.crunchyroll.com/vilos-v2/web/vilos/js/bundle.js"
     charset="utf-8"></script>
-  <script>
-    toggleCanvas();
-    function toggleCanvas() {
-      const canvas = document.querySelector('canvas');
-      canvas.style.display = canvas.style.display === 'none' ? '' : 'none';
-      const button = document.querySelector('button');
-      button.textContent = canvas.style.display === 'none' ? 'Enable Anime4K' : 'Disable Anime4K';
-    }
-  </script>
-
 </body>
 
 </html>
