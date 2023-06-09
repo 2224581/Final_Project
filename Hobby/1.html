@@ -25,30 +25,26 @@
       const button = document.querySelector('button');
       button.textContent = canvas.style.display === 'none' ? 'Enable Anime4K' : 'Disable Anime4K';
     }
-    window.onload = function () {
-      onLoad("../video/1.mp4");
-    };
 
-    function onLoad(videoPath) {
-      fetch(videoPath)
-        .then(response => response.blob())
-        .then(blob => {
-          const reader = new FileReader();
-          reader.onload = function (e) {
-            let src = e.target.result;
-            changeVideo(src);
-          };
-          reader.readAsDataURL(blob);
-        })
-        .catch(error => {
-          console.error("Error loading video:", error);
-        });
+    function onLoad() {
+      const videoSource = "../video/1.mp4";
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const src = e.target.result;
+        changeVideo(src);
+      };
+      reader.readAsDataURL(videoSource);
     }
 
     function changeVideo(src) {
       const player0 = document.getElementById('player0');
       player0.src = src;
+      player0.play();
     }
+
+    window.onload = function () {
+      onLoad();
+    };
   </script>
 
 </body>
