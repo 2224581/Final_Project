@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Crunchyroll</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+    <style>
+        img {
+            cursor: pointer !important;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: transparent !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="https://www.crunchyroll.com/"><img src="../images/Crunchyroll-Logo.png" alt="Crunchyroll Logo"
+                height="90px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.crunchyroll.com/videos/popular">Popular</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://www.crunchyroll.com/videos/new">New</a>
+                        <a class="dropdown-item" href="https://www.crunchyroll.com/videos/alphabetical">Alphabetical</a>
+                        <a class="dropdown-item"
+                            href="https://www.crunchyroll.com/simulcasts/seasons/spring-2023">Simulcasts Seasons</a>
+                        <a class="dropdown-item" href="https://www.crunchyroll.com/simulcastcalendar">Release
+                            Calendar</a>
+                        <a class="dropdown-item" href="https://www.crunchyroll.com/music">Music Video & Concerts</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">GENRES</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://www.crunchyroll.com/comics/manga">Manga<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.crunchyroll.com/games/index.html">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://store.crunchyroll.com/">Store</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.crunchyroll.com/news">All News</a>
+                        <a class="dropdown-item" href="https://www.crunchyroll.com/animeawards/index.html">Anime
+                            Awards</a>
+                        <a class="dropdown-item" href="https://www.crunchyrollexpo.com/">Crunchyroll
+                            Expo</a>
+                        <a class="dropdown-item" href="https://www.crunchyrollmovienight.com/">Anime Movie Night</a>
+                    </div>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 ml-auto" method="post"
+                action="http://courses.washington.edu/bimd233/bimd.php">
+                <input class="form-control mr-sm-2" type="text" name="username" placeholder="Username"
+                    aria-label="username">
+                <input class="form-control mr-sm-2" type="password" name="password" placeholder="Password"
+                    aria-label="Password">
+                <button class="btn btn-success my-2 py-1 my-sm-0" type="submit">Sign in</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide mt-3" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="1.html"><img class="d-block w-100" src="../images/1.png"
+                        alt="KONOSUBA -An Explosion on This Wonderful World!"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="2.html"><img class="d-block w-100" src="../images/2.png"
+                        alt="KamiKatsu: Working for God in a Godless World"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="3.html"><img class="d-block w-100" src="../images/3.png" alt="Hell's Paradise"></a>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- Cards -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <a href="1.html"><img src="../images/1.webp" class="card-img"
+                            alt="KONOSUBA -An Explosion on This Wonderful World!"></a>
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">KONOSUBA -An Explosion on This Wonderful World!</h5>
+                        <a href="1.html" class="btn btn-primary">Watch Video</a>
+                        <img id=play src="../images/play.svg" onclick="playAudio(1, this)">
+                        <audio id="audio1">
+                            <source src="../audio/1.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <a href="2.html"><img src="../images/2.webp" class="card-img"
+                            alt="KamiKatsu: Working for God in a Godless World"></a>
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">KamiKatsu: Working for God in a Godless World</h5>
+                        <a href="2.html" class="btn btn-primary">Watch Video</a>
+                        <img id=play src="../images/play.svg" onclick="playAudio(2, this)">
+                        <audio id="audio2">
+                            <source src="../audio/2.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <a href="3.html"><img src="../images/3.webp" class="card-img" alt="Hell's Paradise"></a>
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">Hell's Paradise</h5>
+                        <a href="3.html" class="btn btn-primary">Watch Video</a>
+                        <img id=play src="../images/play.svg" onclick="playAudio(3, this)">
+                        <audio id="audio3">
+                            <source src="../audio/3.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<head>

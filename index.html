@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -18,7 +19,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <img src="images/logo.png" alt="logo" height="70px">
-        <h3 class="navbar-brand mt-2">Web</h3>
+        <a href="">
+            <h3 class="navbar-brand mt-2">Portfolio</h3>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,8 +32,7 @@
                     <a class="nav-link" href="https://github.com/2224581">GitHub</a>
                 </li>
                 <li class="nav-item">
-                    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-                    <a class="nav-link" href="">Bootstrap</a>
+                    <a class="nav-link" href="https://code.jquery.com/jquery-3.4.1.min.js">Bootstrap</a>
                 </li>
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
@@ -49,12 +51,15 @@
                         <a class="dropdown-item" href="../bimd233/lab14.html">Lab14</a>
                         <a class="dropdown-item" href="../bimd233/lab15.html">Lab15</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="../midterm">midterm</a>
+                        <a class="dropdown-item" href="../midterm">Midterm</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="../lavender_repo/lavender.html">Lavender</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="../Group_Project">Group_Project</a>
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Hobby/">Hobby Project</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0 ml-auto" method="post"
@@ -67,7 +72,9 @@
             </form>
         </div>
     </nav>
+
     <!-- Carousel -->
+    <h3 style="padding-top: 10px; padding-left: 10px;">Highlights</h3>
     <div id="carouselExampleIndicators" class="carousel slide mt-3" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -76,24 +83,22 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="images/grey.jpg" alt="First slide">
+                <a href="../midterm"><img class="d-block w-100" src="images/Highlight1.png" alt="Highlight 1"></a>
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Lorem</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, laudantium one.</p>
+                    <h5>The Angel Next Door Spoils Me Rotten Collection</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="images/grey.jpg" alt="Second slide">
+                <a href="../bimd233/lab04.html/A.html"><img class="d-block w-100" src="images/Highlight2.png"
+                        alt="Highlight 2"></a>
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Lorem</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, laudantium two.</p>
+                    <h5>Mahiru Appreciation Collage</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="images/grey.jpg" alt="Third slide">
+                <a href="../Group_Project"><img class="d-block w-100" src="images/Highlight3.png" alt="Highlight 3"></a>
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Lorem</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, laudantium three.</p>
+                    <h5>Anime Streaming Platform</h5>
                 </div>
             </div>
         </div>
@@ -106,55 +111,171 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
     <!-- Cards -->
     <div class="container mt-5">
         <div class="row">
-
+            <!-- Labs -->
+            <h3 class="container mt-2">Labs</h3>
+            <!-- Card 1 -->
             <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <div class="card " style="width: 18rem;">
-                    <img src="images/grey.jpg" class="card-img" alt="img">
+                    <img src="images/Lab1.png" class="card-img" alt="img" onclick="enlargeImg()" id="img1">
                     <div class="card-body">
-                        <h5 class="card-title mt-2">First Card</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <a href="#" class="btn btn-primary">See More</a>
+                        <h5 class="card-title mt-2">Lab 01</h5>
+                        <p class="card-text">Hello World!</p>
+                        <a href="../bimd233/lab01.html" class="btn btn-primary">View Page</a>
                     </div>
                 </div>
             </div>
-
+            <!-- Card 2 -->
             <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <div class="card " style="width: 18rem;">
-                    <img src="images/grey.jpg" class="card-img" alt="img">
+                    <img src="images/Lab2.png" class="card-img" alt="img">
                     <div class="card-body">
-                        <h5 class="card-title mt-2">Second Card</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <a href="#" class="btn btn-primary">See More</a>
+                        <h5 class="card-title mt-2">Lab 02</h5>
+                        <p class="card-text">Intra page links</p>
+                        <a href="../bimd233/lab02.html" class="btn btn-primary">View Page</a>
                     </div>
                 </div>
             </div>
-
+            <!-- Card 3 -->
             <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <div class="card " style="width: 18rem;">
-                    <img src="images/grey.jpg" class="card-img" alt="img">
+                    <img src="images/Lab3.png" class="card-img" alt="img">
                     <div class="card-body">
-                        <h5 class="card-title mt-2">Third Card</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <a href="#" class="btn btn-primary">See More</a>
+                        <h5 class="card-title mt-2">Lab 03</h5>
+                        <p class="card-text">Tables and Forms</p>
+                        <a href="../bimd233/lab03.html" class="btn btn-primary">View Page</a>
                     </div>
                 </div>
             </div>
-
+            <!-- Card 4 -->
             <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <div class="card " style="width: 18rem;">
-                    <img src="images/grey.jpg" class="card-img" alt="img">
+                    <img src="images/Lab4.png" class="card-img" alt="img">
                     <div class="card-body">
-                        <h5 class="card-title mt-2">Third Card</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        <a href="#" class="btn btn-primary">See More</a>
+                        <h5 class="card-title mt-2">Lab 04</h5>
+                        <p class="card-text">Images & Extra Markup</p>
+                        <a href="../bimd233/lab04.html" class="btn btn-primary">View Page</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card " style="width: 18rem;">
+                    <img src="images/Lab6.png" class="card-img" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">Lab 06</h5>
+                        <p class="card-text">Multimedia</p>
+                        <a href="../bimd233/lab06.html" class="btn btn-primary">View Page</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card " style="width: 18rem;">
+                    <img src="images/Lab8.png" class="card-img" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">Lab 08</h5>
+                        <p class="card-text">Introduction to CSS</p>
+                        <a href="../bimd233/lab08.html" class="btn btn-primary">View Page</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card " style="width: 18rem;">
+                    <img src="images/Lab10.png" class="card-img" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">Lab 10</h5>
+                        <p class="card-text">Bootstrap</p>
+                        <a href="../bimd233/lab10.html" class="btn btn-primary">View Page</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card " style="width: 18rem;">
+                    <img src="images/Lab12.png" class="card-img" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">Lab 12</h5>
+                        <p class="card-text">Arrays, Functions, & Objects</p>
+                        <a href="../bimd233/lab12.html" class="btn btn-primary">View Page</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 9 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card " style="width: 18rem;">
+                    <img src="images/Lab13.png" class="card-img" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">Lab 13</h5>
+                        <p class="card-text">Branching, Loops, & Arrays</p>
+                        <a href="../bimd233/lab13.html" class="btn btn-primary">View Page</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 10 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card " style="width: 18rem;">
+                    <img src="images/Lab14.png" class="card-img" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">Lab 14</h5>
+                        <p class="card-text">The Document Object Model</p>
+                        <a href="../bimd233/lab14.html" class="btn btn-primary">View Page</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 11 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card " style="width: 18rem;">
+                    <img src="images/Lab15.png" class="card-img" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">Lab 15</h5>
+                        <p class="card-text">Events</p>
+                        <a href="../bimd233/lab15.html" class="btn btn-primary">View Page</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Projects -->
+            <h3 class="container mt-2">Projects</h3>
+            <!-- Card 12 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card " style="width: 18rem;">
+                    <img src="images/Midterm.png" class="card-img" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">Midterm</h5>
+                        <p class="card-text">Angel Next Door Collection</p>
+                        <a href="../midterm" class="btn btn-primary">View Page</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 13 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card " style="width: 18rem;">
+                    <img src="images/Lavender.png" class="card-img" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">Lavender</h5>
+                        <p class="card-text">Lavender CSS</p>
+                        <a href="../lavender_repo/lavender.html" class="btn btn-primary">View Page</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 14 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/Group_Project.png" class="card-img" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">Group Project</h5>
+                        <p class="card-text">Anime Streaming Platform</p>
+                        <a href="../Group_Project" class="btn btn-primary">View Page</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
 </body>
 
 </html>

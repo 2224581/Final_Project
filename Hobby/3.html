@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hell's Paradise</title>
+  <script src='../lib/Anime4K.js'></script>
+  <link rel="stylesheet" href="../css/player.css">
+</head>
+
+<body onload="onLoad();">
+
+  <div id=input>
+    <input type="file" onchange="onSelectFile(this);"><br>
+    <button onclick="toggleCanvas()">Disable Anime4K</button>
+  </div>
+
+  <div id="vilos"></div>
+
+  <script type="text/javascript" src="https://static.crunchyroll.com/vilos-v2/web/vilos/js/bundle.js"
+    charset="utf-8"></script>
+  <script>
+    toggleCanvas();
+    function toggleCanvas() {
+      const canvas = document.querySelector('canvas');
+      canvas.style.display = canvas.style.display === 'none' ? '' : 'none';
+      const button = document.querySelector('button');
+      button.textContent = canvas.style.display === 'none' ? 'Enable Anime4K' : 'Disable Anime4K';
+    }
+  </script>
+
+</body>
+
+</html>

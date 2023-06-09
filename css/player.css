@@ -1,0 +1,20 @@
+body {
+    overscroll-behavior: none;
+    background-color: black;
+}
+
+.r-mfzc6t,
+.r-1e6zz2d {
+    background-color: transparent !important;
+    color: transparent !important;
+}
+
+#input {
+    position: absolute;
+    z-index: 10;
+}
+
+#velocity-canvas {
+    max-height: 100%;
+    max-width: 100%;
+}
