@@ -10,7 +10,9 @@
 
 <body onload="onLoad();">
 
-  <button onclick="toggleCanvas()">Disable Anime4K</button>
+  <div id=input>
+    <button onclick="onSelectFile('../video/1.mp4')">Select File</button>
+    <button onclick="toggleCanvas()">Disable Anime4K</button>
   </div>
 
   <div id="vilos"></div>
@@ -19,28 +21,6 @@
     charset="utf-8"></script>
   <script>
     toggleCanvas();
-    function onSelectFile(filePath) {
-      fetch(filePath)
-        .then(response => response.blob())
-        .then(blob => {
-          var reader = new FileReader();
-          reader.onload = function (e) {
-            let src = e.target.result;
-            changeVideo(src);
-          };
-          reader.readAsDataURL(blob);
-        });
-    }
-
-    function changeVideo(src) {
-      const player0 = document.getElementById('player0');
-      player0.src = src;
-      player0.play();
-    }
-
-    window.onload = function () {
-      onSelectFile('../video/1.mp4');
-    };
   </script>
 </body>
 
